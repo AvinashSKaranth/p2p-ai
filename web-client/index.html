@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>P2P AI Inference</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="app">
+  <aside id="sidebar">
+    <h1>P2P AI</h1>
+    <div id="status-panel">
+      <div class="status-item"><span class="label">Peer ID:</span> <span id="peer-id">-</span></div>
+      <div class="status-item"><span class="label">Status:</span> <span id="peer-status">Initializing...</span></div>
+      <div class="status-item"><span class="label">Providers:</span> <span id="provider-count">0</span></div>
+      <div class="status-item"><span class="label">Heartbeat:</span> <span id="heartbeat-status">-</span></div>
+      <div class="status-item"><span class="label">Mode:</span> <span id="peer-mode">-</span></div>
+    </div>
+    <div id="model-panel">
+      <h3>Model</h3>
+      <button id="btn-download-model" class="btn primary" style="display:none">Download Model</button>
+      <button id="btn-delete-model" class="btn danger" style="display:none">Delete Model</button>
+      <div id="model-status">Checking...</div>
+    </div>
+  </aside>
+
+  <main id="chat-container">
+    <div id="chat-messages"></div>
+    <div id="chat-input-area">
+      <textarea id="chat-input" placeholder="Type your prompt..."></textarea>
+      <button id="btn-send" class="btn primary">Send</button>
+    </div>
+  </main>
+</div>
+
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

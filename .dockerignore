@@ -1,0 +1,5 @@
+node_modules
+react-native-client
+.git
+.codegraph
+.env

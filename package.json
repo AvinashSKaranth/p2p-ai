@@ -1,0 +1,35 @@
+{
+  "name": "p2p-ai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.js",
+    "server": "node server/index.js",
+    "expo:start": "expo start",
+    "rn:reset-project": "cd react-native-client && node ./scripts/reset-project.js",
+    "android": "cd react-native-client && setup:android && expo run:android",
+    "ios": "cd react-native-client && expo run:ios",
+    "web": "serve web-client -p 13080",
+    "lint": "cd react-native-client && expo lint",
+    "setup:android": "cd react-native-client && node scripts/setup-local-properties.js",
+    "docker:build": "docker build -t ghcr.io/avinashskaranth/p2p-ai:latest .",
+    "docker:publish": "docker push ghcr.io/avinashskaranth/p2p-ai:latest",
+    "docker": "npm run docker:build && npm run docker:publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.0",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.5.0",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "mysql2": "^3.14.1",
+    "peer": "^1.0.2",
+    "serve": "^14.2.6",
+    "uuid": "^11.1.0"
+  }
+}

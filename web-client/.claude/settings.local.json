@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__codegraph__codegraph_files",
+      "Bash(Get-ChildItem -Recurse -Depth 3 C:\\\\Workspace\\\\ai\\\\p2p-ai)",
+      "Bash(Select-Object FullName)",
+      "PowerShell(Get-ChildItem -Recurse -Depth 3 C:\\\\Workspace\\\\ai\\\\p2p-ai\\\\react-native-client | Where-Object { -not $_.PSIsContainer } | Select-Object FullName, Length | Sort-Object FullName | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Recurse -Depth 2 C:\\\\Workspace\\\\ai\\\\p2p-ai\\\\web-client | Where-Object { -not $_.PSIsContainer } | Select-Object FullName, Length | Sort-Object FullName | Format-Table -AutoSize)"
+    ]
+  }
+}
